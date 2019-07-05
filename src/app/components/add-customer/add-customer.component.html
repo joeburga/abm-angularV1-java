@@ -1,0 +1,44 @@
+<div class="container">
+
+    <div class="col-row">
+      <h1>Creando Cliente</h1>
+    </div>
+  
+    <form action="" (ngSubmit)="saveCustomer()">
+  
+      <div class="form-row">
+        <div class="form-group col-6">
+          <input type="text" class="form-control" name="name" [(ngModel)]="customer.name" placeholder="Nombres" required
+            minlength="4">
+        </div>
+  
+        <div class="form-group col-6">
+          <input type="text" class="form-control" name="lastName" [(ngModel)]="customer.lastName" placeholder="Apellidos"
+            required minlength="4">
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-12">
+          <input type="email" class="form-control" name="email" [(ngModel)]="customer.email" placeholder="Email" required>
+        </div>
+      </div>
+  
+      <div class="form-row">
+  
+        <div class="form-group col-7">
+          <select class="custom-select" [(ngModel)]="customer.sexo" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="undefined">Sexo</option>
+            <option *ngFor="let gender of gendersList" [ngValue]="gender">{{ gender }}</option>
+          </select>
+        </div>
+        <div class="form-group col-5">
+          <button style="margin-right: 15px" type="submit" class="btn btn-success">Guardar</button>
+          <button style="margin: 5px" type="button" class="btn btn-success" (click)="cancelarCustomer()">Cancelar</button>
+        </div>
+  
+      </div>
+  
+    </form>
+  
+  </div>

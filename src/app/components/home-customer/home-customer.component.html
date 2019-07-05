@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="card-header">
+      <div class="col-12">
+        <h2>Personas</h2>
+      </div>
+    </div>
+  
+    <div class="card-body">
+  
+      <div class="form-row">
+        <!-- <app-add-customer></app-add-customer> -->
+  
+        <div class="form-group col-6">
+          <button style="margin-left: 15px" type="button" class="btn btn-success" (click)="addCustomer()">Agregar</button>
+          <button style="margin-left: 25px" type="button" class="btn btn-success"
+            (click)="listarCustomer()">Listar</button>
+        </div>
+  
+        <div class="form-group col-6">
+  
+          <div class="form-group col-4">
+            <input type="text" class="form-control" name="id" [(ngModel)]="customerId" placeholder="Id" required>
+          </div>
+  
+          <div class="form-group col-8">
+            <button style="margin-left: 25px" type="button" class="btn btn-success"
+              (click)="searchCustomer()">Buscar</button>
+          </div>
+  
+        </div>
+  
+        <!-- <div class="form-row">
+          <app-list-customer *ngIf="showList" [parentData]="customerId" ></app-list-customer>
+        </div> -->
+  
+      </div>
+  
+    </div>
+  
+  </div>
